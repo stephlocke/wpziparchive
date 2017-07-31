@@ -10,7 +10,7 @@ RUN curl -sSL -o /usr/local/bin/wp "https://raw.githubusercontent.com/wp-cli/bui
     && chmod +x /usr/local/bin/wp \
     && mkdir -p /etc/wp-cli \
     && chown www-data:www-data /etc/wp-cli
-    
+
 RUN echo "export WP_CLI_CONFIG_PATH=/etc/wp-cli/config.yml" > /etc/profile.d/wp-cli.sh
 
 COPY docker-entrypoint.sh /usr/local/bin/
