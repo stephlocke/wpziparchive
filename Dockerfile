@@ -13,4 +13,5 @@ RUN curl -sSL -o /usr/local/bin/wp "https://raw.githubusercontent.com/wp-cli/bui
 
 RUN echo "export WP_CLI_CONFIG_PATH=/etc/wp-cli/config.yml" > /etc/profile.d/wp-cli.sh
 
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /entrypoint.sh
+
